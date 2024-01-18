@@ -1,0 +1,16 @@
+section{
+    height: 600px;
+    width: 85vw;
+    border: 2px solid red;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 150px 150px;
+    grid-auto-rows: 50px;
+    /* grid-auto-flow: column; */
+}
+
+.child{
+    border: 2px solid rgb(11, 12, 11);
+    background-color: rgb(66, 9, 223);
+}

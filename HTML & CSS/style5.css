@@ -1,0 +1,43 @@
+/* #Parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(111, 0, 255);
+} */
+ 
+/* #Child{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+} */
+
+/* li{
+    font-size: 2rem;
+} */
+
+/* li{
+    font-size: 2em;
+} */
+/* 
+div{
+    border: 5px solid green;
+    padding: 10px;
+    margin: 20px;
+} */
+
+div{
+    border: 5px solid green;
+    background-color: blue;
+    height: 100px;
+    display: inline;
+}
+
+span{
+    border: 5px solid red;
+    background-color: aqua;
+    height: 100px;
+    /* display: block; */
+    /* display: inline-block; */
+    /* display: none; */
+    visibility: hidden;
+}
+

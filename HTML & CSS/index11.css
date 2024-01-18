@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    height: 100px;
+    width: 100px;
+    animation-name: bounce;
+    animation-duration: 900ms;
+    animation-timing-function: ease-in;
+    background-color: red;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(85vh) rotate(360deg);
+    }
+}

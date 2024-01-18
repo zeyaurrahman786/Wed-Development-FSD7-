@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    color: blue;
+    font-size: 50px;
+}
+
+/* #One{
+    color: aqua;
+} */
+
+.Two{
+    color: rgb(248, 5, 5);
+}
+
+/* a[href ^= 'https']{
+    background-color: rgb(255, 0, 170);
+} */
+
+a[href*='com']{
+    background-color: red;
+}
+
+input[type='text']{
+    background-color: yellow;
+}
+
+.h{
+    color: yellow;
+}

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+Section{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: white;
+}
+
+#Hello{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+button{
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+}
+
+@media screen and (max-width:500px){
+    Section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    #Hello{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
