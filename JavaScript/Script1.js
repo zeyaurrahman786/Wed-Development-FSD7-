@@ -410,3 +410,19 @@
 
 
 
+// Asynchronous programming :- Asynchronous programming is a programming paradigm that allows multiple tasks to be executed concurrently without waiting for each other to complete.
+
+console.log('One');
+setTimeout(()=>{
+    console.log('Two');
+},2000)
+console.log('Three');
+console.log('Four');
+
+
+
+
+
+// Callback hell
+
+// Promise
