@@ -49,6 +49,7 @@
 
 
 
+// Button me function dene ke liye :-
 
 // 1st
 
@@ -65,6 +66,7 @@
 // btn.onclick=function(){
 //     console.log('Hiii');
 // }
+
 
 
 
