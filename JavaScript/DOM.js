@@ -19,16 +19,16 @@
 
 
 
-const imageEl = document.querySelector('img');
+// const imageEl = document.querySelector('img');
 
-const arr = ['https://images.unsplash.com/photo-1705864864158-4c583edee4e3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1682695798522-6e208131916d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1705947320126-00968927ede7?q=80&w=1229&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1705825179667-e0eaa7415adb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']
+// const arr = ['https://images.unsplash.com/photo-1705864864158-4c583edee4e3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1682695798522-6e208131916d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1705947320126-00968927ede7?q=80&w=1229&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1705825179667-e0eaa7415adb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']
 
-let num = 0
+// let num = 0
 
-setInterval(function(){
-    imageEl.setAttribute('src',arr[num]);
-    num = (num + 1) % arr.length;
-}, 2000);
+// setInterval(function(){
+//     imageEl.setAttribute('src',arr[num]);
+//     num = (num + 1) % arr.length;
+// }, 2000);
 
 
 
@@ -44,3 +44,33 @@ setInterval(function(){
 // div.appendChild(h1)
 // console.log(div);
 // // div.remove()
+
+
+
+
+
+
+// 1st
+
+// function fun1(){
+//     console.log('Hello');
+// }
+
+
+
+
+// 2nd
+
+// let btn = document.querySelector('button')
+// btn.onclick=function(){
+//     console.log('Hiii');
+// }
+
+
+
+// 3rd
+
+// let btn = document.querySelector('button')
+// btn.addEventListener('click',()=>{
+//     console.log('Heyyyy');
+// })
