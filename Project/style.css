@@ -17,6 +17,12 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.anker-tag{
+    text-decoration: none;
+    color: black;
+ }
+
 .cards{
     height: 200px;
     width: 200px;
@@ -26,6 +32,7 @@ h1{
     text-align: center;
     margin-top: 20px;
 }
+
 .text{
     text-align: center;
 }
