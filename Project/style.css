@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+}
+
+.nav{
+    height: 30px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cards{
+    height: 200px;
+    width: 200px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+.text{
+    text-align: center;
+}
