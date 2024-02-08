@@ -124,3 +124,52 @@ addButtonEl.addEventListener('click', function() {
   titleEl.value = '';
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+function step1(fn){
+  setTimeout(()=>{
+    console.log(fn);
+    console.log('select image');
+    fn('selectedImage')
+  },2000)
+}
+function step2(a,fn){
+  setTimeout(()=>{
+    console.log(`yha pe filter hoga ${a}`);
+    fn('filteredImage')
+
+  },4000)
+}  
+function step3(data,fn){
+  setTimeout(()=>{
+    console.log(`captions lagega ${data}`);
+    fn('captionsImage')
+
+  },4000)
+}  
+
+function step4(data){
+  setTimeout(()=>{
+    console.log(`post ho gyi kaun ${data}`);
+  },4000)
+}  
+step1((data)=>{
+step2(data,(filtedImage)=>{
+step3(filtedImage,(captionsImage)=>{
+  step4(captionsImage)
+
+})
+
+})
+})
