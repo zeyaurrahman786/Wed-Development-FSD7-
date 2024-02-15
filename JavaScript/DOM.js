@@ -98,34 +98,32 @@
 
 
 
-// Select input element
-const titleEl = document.getElementById('title');
+// // Select input element
+// const titleEl = document.getElementById('title');
 
-// select list element
-const listEl = document.getElementById('list');
+// // select list element
+// const listEl = document.getElementById('list');
 
-// select button element
-const addButtonEl = document.getElementById('add-button');
+// // select button element
+// const addButtonEl = document.getElementById('add-button');
 
-// adding "click" event listener on button element
-addButtonEl.addEventListener('click', function() {
+// // adding "click" event listener on button element
+// addButtonEl.addEventListener('click', function() {
 
-  // getting the value of the input field
-  const titleText = titleEl.value;
+//   // getting the value of the input field
+//   const titleText = titleEl.value;
   
-  // creating and 'li' element and adding inner text
-  const li = document.createElement('li');
-  li.innerText = titleText;
+//   // creating and 'li' element and adding inner text
+//   const li = document.createElement('li');
+//   li.innerText = titleText;
 
-  // add the newly created li element to the list
-  listEl.appendChild(li);
+//   // add the newly created li element to the list
+//   listEl.appendChild(li);
 
-  // clear the input field after adding li to the list
-  titleEl.value = '';
+//   // clear the input field after adding li to the list
+//   titleEl.value = '';
 
-})
-
-
+// })
 
 
 
@@ -137,39 +135,186 @@ addButtonEl.addEventListener('click', function() {
 
 
 
-function step1(fn){
-  setTimeout(()=>{
-    console.log(fn);
-    console.log('select image');
-    fn('selectedImage')
-  },2000)
+
+
+// function step1(fn){
+//   setTimeout(()=>{
+//     console.log(fn);
+//     console.log('select image');
+//     fn('selectedImage')
+//   },2000)
+// }
+// function step2(a,fn){
+//   setTimeout(()=>{
+//     console.log(`yha pe filter hoga ${a}`);
+//     fn('filteredImage')
+
+//   },4000)
+// }  
+// function step3(data,fn){
+//   setTimeout(()=>{
+//     console.log(`captions lagega ${data}`);
+//     fn('captionsImage')
+
+//   },4000)
+// }  
+
+// function step4(data){
+//   setTimeout(()=>{
+//     console.log(`post ho gyi kaun ${data}`);
+//   },4000)
+// }  
+// step1((data)=>{
+// step2(data,(filtedImage)=>{
+// step3(filtedImage,(captionsImage)=>{
+//   step4(captionsImage)
+
+// })
+
+// })
+// })
+
+
+
+
+
+
+
+
+
+function step1(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
+      resolve('select image')
+    },4000)
+
+  })
+
 }
-function step2(a,fn){
-  setTimeout(()=>{
-    console.log(`yha pe filter hoga ${a}`);
-    fn('filteredImage')
+function step2(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
 
-  },4000)
-}  
-function step3(data,fn){
-  setTimeout(()=>{
-    console.log(`captions lagega ${data}`);
-    fn('captionsImage')
+      resolve('filterted')
+    },4000)
 
-  },4000)
-}  
+  })
 
-function step4(data){
-  setTimeout(()=>{
-    console.log(`post ho gyi kaun ${data}`);
-  },4000)
-}  
-step1((data)=>{
-step2(data,(filtedImage)=>{
-step3(filtedImage,(captionsImage)=>{
-  step4(captionsImage)
+}
+function step3(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
 
-})
+      resolve('captionssss')
+    },4000)
 
-})
-})
+  })
+
+}
+function step4(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
+
+      resolve('postttttttt')
+       
+
+    },4000)
+
+  })
+
+}
+
+
+
+
+
+
+     step1().
+     then((data)=>{
+      console.log(data);
+      return step2()
+     }).
+     then((filtedImage)=>{
+      console.log(filtedImage);
+      return step3()
+
+     }).
+     then((captionsImage)=>{
+      console.log(captionsImage);
+      return step4()
+     }).
+     then((data)=>{
+      console.log(data);
+
+     })
+
+
+
+
+
+
+
+function step1(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
+      resolve('select image')
+    },4000)
+
+  })
+
+}
+function step2(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
+
+      resolve('filterted')
+    },4000)
+
+  })
+
+}
+function step3(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
+
+      resolve('captionssss')
+    },4000)
+
+  })
+
+}
+function step4(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log('selecttt');
+
+      resolve('postttttttt')
+       
+
+    },4000)
+
+  })
+
+}
+
+
+
+
+
+
+// Asyc 
+
+//     async  function call(){
+//     await step1()
+//     await step2()
+//     await step3()
+//     await step4()
+//  }
+
