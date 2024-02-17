@@ -8,32 +8,32 @@ APIs are commonly used in web development to enable interaction between differen
 
 
 
-let div = document.querySelector('div')
-// fetch('https://jsonplaceholder.typicode.com/todos')
-fetch('https://dummyjson.com/products')
-.then((data)=>{
- // console.log(data);
-    return data.json();
+// let div = document.querySelector('div')
+// // fetch('https://jsonplaceholder.typicode.com/todos')
+// fetch('https://dummyjson.com/products')
+// .then((data)=>{
+//  // console.log(data);
+//     return data.json();
 
-}).then((res)=>{
-    console.log(res.products);
-    fun1(res)
+// }).then((res)=>{
+//     console.log(res.products);
+//     fun1(res)
 
-}).catch((error)=>{
-    console.log(error);
+// }).catch((error)=>{
+//     console.log(error);
 
-})
+// })
 
-function fun1(data){
-    // console.log(data);
-    data.map((res)=>{
-        let h1 = document.querySelector('h1')
-        let h2 = document.querySelector('h2')
-        h1.innerText = res.id
-        h2.innerText = res.title
-        div.append(h1,h2)
-    })
-}
+// function fun1(data){
+//     // console.log(data);
+//     data.map((res)=>{
+//         let h1 = document.querySelector('h1')
+//         let h2 = document.querySelector('h2')
+//         h1.innerText = res.id
+//         h2.innerText = res.title
+//         div.append(h1,h2)
+//     })
+// }
 
 
 
@@ -41,6 +41,19 @@ function fun1(data){
 
 
   
+
+
+let key= '9f6290d6cda9a36a63755fadee71f83d'
+let city='Delhi'
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`).
+then((data)=>{
+return data.json()
+}).then((res)=>{
+console.log(res);
+})
+
+
+
 
 
 
