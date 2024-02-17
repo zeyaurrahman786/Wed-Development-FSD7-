@@ -43,15 +43,74 @@ APIs are commonly used in web development to enable interaction between differen
   
 
 
+
+
+
+
+let btn = document.querySelector('button')
+let inp = document.querySelector('input')
+let div = document.querySelector('div')
+btn.addEventListener('click',()=>{
+let city = inp.value
 let key= '9f6290d6cda9a36a63755fadee71f83d'
-let city='Delhi'
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`).
 then((data)=>{
 return data.json()
 }).then((res)=>{
 console.log(res);
+add(res);
+})
 })
 
+
+function add(data){
+  console.log(data,"data");
+
+  let h1 = document.createElement('h1')
+  let p = document.createElement('p')
+  let p1 = document.createElement('p1')
+
+  h1.innerText = data.name
+  p.innerText = data.main.temp_max
+  p1.innerText = data.main.temp_min
+
+  div.append(h1,p,p1)
+}
+
+
+
+
+/* {
+  coord: { lon: 77.4, lat: 23.2667 },
+  weather: [
+    { id: 801, main: 'Clouds', description: 'few clouds', icon: '02d' }
+  ],
+  base: 'stations',
+  main: {
+    temp: 302.28,
+    feels_like: 301.39,
+    temp_min: 301.03,
+    temp_max: 302.28,
+    pressure: 1014,
+    humidity: 34
+  },
+  visibility: 6000,
+  wind: { speed: 3.6, deg: 310 },
+  clouds: { all: 20 },
+  dt: 1708172275,
+  sys: {
+    type: 1,
+    id: 9063,
+    country: 'IN',
+    sunrise: 1708132939,
+    sunset: 1708174013
+  },
+  timezone: 19800,
+  id: 1275841,
+  name: 'Bhopal',
+  cod: 200
+}
+*/
 
 
 
