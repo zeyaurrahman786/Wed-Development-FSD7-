@@ -15,9 +15,16 @@ button.addEventListener('click',()=>{
     })
 })
 
-function show(data){
-    console.log(data[0].show.image.original,'Hiiii');
+function show(data)
+{
+    // console.log(data[0].show.image.original,'Hiiii');
+    // let img = document.createElement('img');
+    // img.setAttribute('src',data[0].show.image.original)
+
+    data.map((a)=>{
     let img = document.createElement('img');
-    img.setAttribute('src',data[0].show.image.original)
+    console.log(a.show.image.original,'Heyyy');
     div.append(img);
+    })
+    // div.append(img);
 }
