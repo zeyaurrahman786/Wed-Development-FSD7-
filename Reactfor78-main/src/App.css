@@ -1,0 +1,16 @@
+/* #one{
+  color: aqua;
+}
+*{
+  background-color: red;
+} */
+
+#div{
+  display: flex;
+ justify-content: space-around;
+align-items: center;
+  /* background-color: black; */
+}
+p{
+  font-size: larger;
+}
