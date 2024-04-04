@@ -1,75 +1,42 @@
-// import React from 'react'
-// // import Home from './Home'
-// const App = () => { 
-//   let count=0
-//   const fun1=()=>{
-//     // console.log('ehehehehe');
-//     count++
-//     console.log(count,"rrrr");
-//   }
-//   return (
-//     <div>  
-//     <p>  {count} </p>
-//       <button  onClick={fun1}> click me</button>
-      
-//   {/* <Home  data='hello' /> */}
-//     </div>
-//   )
-// }
+import React, { useState } from 'react'
 
-// export default App
+function App()
+{
 
+  const [input,SetInput] = useState()
+  const [data,SetData] = useState([])
 
+  const fun1=(e)=>{
+    SetInput(e.target.value)
+  }
 
-// import React from 'react'
-// import Home from './Home'
-// import CounterWithLogin from './Couter'
-// import Clock from './Clock'
+  const add=()=>{
+    SetData([...data,input])
+    SetInput('')
 
-// const App = () => {
-//   return (
-//     <div>
-//       {/* <Home/> */}
-//       {/* <CounterWithLogin/> */}
-//       <Home/>
-//       {/* <Clock/> */}
+  }
 
-//     </div>
-//   )
-// }
+  function delete(id){
+    let newArray = data.filter((val,index)=>{
+      return index!=id
+    })
+    SetData(newArray)
 
-// export default App
+  }
 
-
-
-import React from 'react'
-import Navbar from './Navbar'
-import './App.css'
-import {Route,Routes}  from 'react-router-dom'
-import Home from './Home'
-import About from './About'
-import Contact from './Contact'
-
-
-const App = () => {
   return (
-    <>
-    
-      <Navbar/>
-
-
-      <Routes>
-
-        <Route   path='/' element={<Home/>}  />
-        <Route   path='/about' element={<About/>}  />
-        <Route   path='/contact' element={<Contact/>}  />
-
-
-      </Routes>
-
-
-    
-    </>
+    <div>
+    <input name='input' value={input} onChange={fun1} type='text' placeholder='Enter Your Name' />
+    <button onClick={add}>Add</button>
+    {
+      data.map((a,b,c)=>{
+        return (<>
+        <li>{a}</li>
+      <button onClick={delete}>Delete</button>
+        </>)
+      })
+    }
+    </div>
   )
 }
 
