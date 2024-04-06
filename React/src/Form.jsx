@@ -14,7 +14,7 @@ function Form() {
       
       }
     
-    function fun2(e){
+    const fun2=(e)=>{
         e.preventDefault();
         console.log(input);
     }
@@ -22,10 +22,10 @@ function Form() {
   return (
     <div>
         <form onSubmit={fun2}>
-            <input type="text" onChange={fun1} value={input.FirstName} name = 'First Name' placeholder='Enter FirstName' />
+            <input type="text" onChange={fun1} value={input.FirstName} name = 'FirstName' placeholder='Enter FirstName' />
             <br />
             <br />
-            <input type="text" onChange={fun1} value={input.LastName} name = 'Last Name' placeholder='Enter LastName' />
+            <input type="text" onChange={fun1} value={input.LastName} name = 'LastName' placeholder='Enter LastName' />
             <br />
             <br />
             <input type="email" onChange={fun1} value={input.Email} name = 'Email' placeholder='Enter Your Email' />
