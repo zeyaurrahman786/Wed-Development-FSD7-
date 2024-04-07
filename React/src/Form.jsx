@@ -14,14 +14,16 @@ function Form() {
       
       }
     
-    const fun2=(e)=>{
+    function chalaja(e){
         e.preventDefault();
         console.log(input);
+        let a = JSON.stringify(input);
+        localStorage.setItem('data', a);
     }
     
   return (
     <div>
-        <form onSubmit={fun2}>
+        <form onSubmit={chalaja}>
             <input type="text" onChange={fun1} value={input.FirstName} name = 'FirstName' placeholder='Enter FirstName' />
             <br />
             <br />
