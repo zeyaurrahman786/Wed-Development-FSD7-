@@ -11,7 +11,7 @@ const App = () => {
     useEffect(()=>{
       let val=   localStorage.getItem('data')
       let newData=   JSON.parse(val)
-      // console.log(newData,"rrr");
+      console.log(newData,"rrr");
       SetData(newData)
     },[])
 
