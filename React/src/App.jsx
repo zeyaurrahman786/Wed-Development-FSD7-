@@ -11,7 +11,7 @@ function App() {
       {/* <TodoList/> */}
       {/* <Form/> */}
       {/* <Card/> */}
-      <ComponentA a={data} />
+      {/* <ComponentA a={data} /> */}
     </div>
   )
 }

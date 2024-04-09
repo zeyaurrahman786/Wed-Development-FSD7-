@@ -6,7 +6,7 @@ function ComponentB(BillGates) {
 
   return (
     <div>
-        {BillGates.b};
+        {BillGates.b};  
     </div>
   )
 }
