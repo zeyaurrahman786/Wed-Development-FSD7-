@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import dummyFoodData from './CartData';
-import { useNavigate } from 'react-router-dom'
+import dummyFoodData from './CardData';
 import './Cart.css'; 
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
-   let navigate=   useNavigate()
+
 
   useEffect(() => {
     setCartData(dummyFoodData);
   }, [])
 
-  function addCart(){
-    navigate('/view')
-
-  }
 
   return (
     <div className="cart-container">
       <h2>Cart</h2>
-      <button onClick={ addCart}> ViewCart</button>
+      <button> ViewCart</button>
       <ul className="cart-items">
         {cartData.map(item => (
           <li key={item.id} className="cart-item">
