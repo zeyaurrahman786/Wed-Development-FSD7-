@@ -25,14 +25,66 @@
 
 
 
-import React from 'react'
-import Cart from './Cart'
-const App = () => {
+// import React from 'react'
+// import Cart from './Cart'
+// const App = () => {
+
+//   return (
+//     <div>
+//      <Cart/> 
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react'
+import { useEffect } from 'react';
  
+
+const App = () => {
+let [data,setData]= useState([])
+
+useEffect(()=>{
+  fetch('https://dummyjson.com/recipes').then(response=>{
+
+  return response.json()
+  }).then(h => {
+    // Code to handle the data received
+    // console.log(h,"hhhhhhhhhhhhhhhhhhhhhh");
+    setData(h.recipes)
+  })
+  .catch(error => {
+    // Code to handle errors
+    console.error('There was a problem with the fetch operation:', error);
+  });
+},[])
+ 
+console.log(data);
+
+
   return (
-    <div>
-     <Cart/> 
-    </div>
+    <>{
+    data.map(id=>{
+      return (
+        <div key={id}>
+          <h1>{id.id}</h1>
+          <h2>{id.name}</h2>
+          
+        </div>
+      )
+    })
+  }
+    </>
   )
 }
 
