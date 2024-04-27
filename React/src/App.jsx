@@ -31,7 +31,7 @@ const App = () => {
  
   return (
     <div>
-     <Cart/>
+     <Cart/> 
     </div>
   )
 }
