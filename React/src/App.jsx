@@ -49,7 +49,7 @@
 
 // import React, { useState } from 'react'
 // import { useEffect } from 'react';
- 
+
 
 // const App = () => {
 // let [data,setData]= useState([])
@@ -68,7 +68,7 @@
 //     console.error('There was a problem with the fetch operation:', error);
 //   });
 // },[])
- 
+
 // console.log(data);
 
 
@@ -79,7 +79,7 @@
 //         <div key={id}>
 //           <h1>{id.id}</h1>
 //           <h2>{id.name}</h2>
-          
+
 //         </div>
 //       )
 //     })
@@ -97,31 +97,95 @@
 
 
 
-import React from 'react'
-import { useReducer } from 'react';
+// import React from 'react'
+// import { useReducer } from 'react';
 
-let reducer = (state, action) => {
-  if(action.type === "incr"){
-    return state + 1;
-  }
-  else if(action.type === "decr"){
-    return state - 1;
-  }
-  return state;
-}
+// let reducer = (state, action) => {
+//   if(action.type === "incr"){
+//     return state + 1;
+//   }
+//   else if(action.type === "decr"){
+//     return state - 1;
+//   }
+//   return state;
+// }
+
+// const App = () => {
+
+//   let [state, dispatch] = useReducer(reducer,0)
+
+//   return (
+//     <div>
+//       <p>{state}</p>
+
+//       <button onClick={() => dispatch ({type : "incr"})}>Increment</button>
+//       <button onClick={() => dispatch ({type : "decr"})}>Decrement</button>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useReducer } from 'react'
+
+// const initialState = false;
+
+// const reducer = (state, action) => {
+
+//   switch (action.type) {
+//     case 'toggle':
+//       return !state;
+//     case 'reset':
+//       return initialState;
+//     default:
+//       return state;
+//   }
+// };
+
+// const App = () => {
+
+//   const [state, dispatch] = useReducer(reducer, initialState)
+
+//   return (
+//     <div>
+//       <h1 style={{ color: state ? 'green' : 'red' }}>{state ? 'on' : 'off'}</h1>
+
+//       <button onClick={() => dispatch({ type: "toggle" })}>Toggle</button>
+//       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
 
 const App = () => {
-
-  let [state, dispatch] = useReducer(reducer,0)
-  
   return (
     <div>
-      <p>{state}</p>
-
-      <button onClick={() => dispatch ({type : "incr"})}>Increment</button>
-      <button onClick={() => dispatch ({type : "decr"})}>Decrement</button>
+      
     </div>
   )
 }
 
-export default App;
+export default App
