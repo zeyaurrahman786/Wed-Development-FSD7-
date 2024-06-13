@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 const App = () => {
   let [input,SetInput]=useState({
-    FirstName:"",
-    LastName:"",
-    Email:"",
-    Password:""
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:""
   })
 
   let [data,SetData]=useState(null)
@@ -35,16 +35,16 @@ function remove(){
   return (
     <div>
       <form onSubmit={chalaja}>
-        <input type='text' onChange={fun1}  name='FirstName'  value={input.firstName} placeholder='Enter your FirstName'/>
+        <input type='text' onChange={fun1}  name='firstName'  value={input.firstName} placeholder='Enter your FirstName'/>
         <br/>
         <br/>
-        <input type='text' onChange={fun1} name='LastName'  value={input.lastName}  placeholder='Enter your LastName'/>
+        <input type='text' onChange={fun1} name='lastName'  value={input.lastName}  placeholder='Enter your LastName'/>
         <br/>
         <br/>
-        <input type='email' onChange={fun1} name='Email'  value={input.email} placeholder='Enter your Email'/>
+        <input type='email' onChange={fun1} name='email'  value={input.email} placeholder='Enter your Email'/>
         <br/>
         <br/>
-        <input type='password' onChange={fun1} name='Password' value={input.password} placeholder='Enter your PassWord'/>
+        <input type='password' onChange={fun1} name='password' value={input.password} placeholder='Enter your PassWord'/>
         <br/>
         <br/>
         <button type='submit'>Submit</button>
